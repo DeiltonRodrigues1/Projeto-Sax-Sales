@@ -1,63 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <title>HOME</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><i class="bi bi-list"></i></li>
-                <li><i class="bi bi-geo-alt"></i></li>
-                <li><p>São Paulo, SP</p></li>
-                <li><i class="bi bi-card-image"></i></li>
-            </ul>
-        </nav>
-    </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="./CSS/style-padrao.css">
+        <title>HOME</title>
+    </head>
+    <body>
+        <header class="cabecalho">
+            <nav class="menu">
+                <ul class="ul-menu">
+                   <a href="login.html"> <li><i class="bi bi-file-person"></i></li></a>
+                  <li id="imagem-localizacao"><i class="bi bi-geo-alt"></i><p class="nome-localizacao">São Paulo, SP</p></li>
+                    <a href=""><li><i class="bi bi-card-image"></i></li></a>
+                </ul>
+            </nav>
+        </header>
+        <main>
+           <section id="mensagens-inicio">
+                <h1 id="nome-empresa">SAX SUNSET <i class="bi bi-sunset"></i> </h1>
+                <h2 class="mensagem">Olá, Seja bem-vindo!
+                    <p>Aqui você encontra os diversos tipos e modelos de saxofones importados</p></h2>
+                
+            </section>
+            <section id="input">
+                <i class="bi bi-search"></i>
+                <input id="input-text" type="text" placeholder="Procure o seu saxofone aqui">
+            </section>
     <main>
 
-       <section>
-        <h1>CADASTRAR SAXOFONE</h1>
-        <form action="">
-            <div>
-                <label for="">NOME DO SAXOFONE</label>
-                <input type="text">
-
-                <label for="">MODELO</label>
-                <input type="text">
-
-                <label for="">MARCA</label>
-                <input type="text">
-
-                <label for="">PREÇO UNITÁRIO</label>
-                <input type="text">
-
-                <label for="">CÓDIGO DE BARRAS</label>
-                <input type="text">
-
-                <button>CADASTRAR PRODUTO</button>
-            </div>
-        </form>
-    </section>
-        <footer>
-            <ul>
-            <li>
-                <a href=""><i class="bi bi-house"><p>HOME</p></i></a>
-            </li>
-            <li>
-                <a href=""><i class="bi bi-emoji-smile"></i><p>PERFIL</p></i></a>
-            </li>
-            <li>
-                <a href=""><i class="bi bi-receipt"></i><p>CUPONS</p></i></a>
-            </li>
-            <li>
-                <a href=""><i class="bi bi-star"></i></i><p>PEDIDOS</p></i></a>
-            </li>
-        </ul>
-        </footer>
+        <div class="caixa">
+            <section class="cadastro-saxofone">
+                <h1>CADASTRAR SAXOFONE</h1>
+                <form action="">
+                    <div class="input-container">
+                        <label for="nome-saxofone">NOME DO SAXOFONE</label>
+                        <input type="text" id="nome-saxofone">
+        
+                        <label for="modelo-saxofone">MODELO</label>
+                        <input type="text" id="modelo-saxofone">
+        
+                        <label for="marca-saxofone">MARCA</label>
+                        <input type="text" id="marca-saxofone">
+        
+                        <label for="preco-saxofone">PREÇO UNITÁRIO</label>
+                        <input type="text" id="preco-saxofone">
+        
+                        <label for="codigo-saxofone">CÓDIGO DE BARRAS</label>
+                        <input type="text" id="codigo-saxofone">
+        
+                        <button class="cadastrar-produto-btn">CADASTRAR PRODUTO</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+        
+        <footer id="footer" class="footer">
+            <ul class="footer-card">
+             <a href="home.html"><li class="footer-item"><i class="bi bi-house-fill"></i><p class="footer-nome-item">HOME</p></li></a>
+             <a href="cadastrar_usuario.html"><li class="footer-item"><i class="bi bi-emoji-smile"></i><p class="footer-nome-item">CADASTRO USUARIO</p></li></a>
+            <a href="cadastrar_produto.html"><li class="footer-item"><i class="bi bi-upc-scan"></i><p class="footer-nome-item">CADASTRO DE PRODUTO</p></li></a>
+             <a href="carrinho.html"><li class="footer-item"><i class="bi bi-cart"></i><p class="footer-nome-item">CARRINHO</p></li>></a>
+           <a href="produto.html"><li class="footer-item"><i class="bi bi-stickies"></i><p class="footer-nome-item">PRODUTO</p></li></a>
+          </ul>
+    </footer>
     
 </main>
 </body>

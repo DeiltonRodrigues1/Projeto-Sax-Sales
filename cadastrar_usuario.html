@@ -4,69 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./CSS/style-padrao.css">
     <title>HOME</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><i class="bi bi-list"></i></li>
-                <li><i class="bi bi-geo-alt"></i></li>
-                <li><p>São Paulo, SP</p></li>
-                <li><i class="bi bi-card-image"></i></li>
+    <header class="cabecalho">
+        <nav class="menu">
+            <ul class="ul-menu">
+                <a href="login.html"><li><i class="bi bi-file-person"></i></li></a>
+                <li id="imagem-localizacao"><i class="bi bi-geo-alt"></i><p class="nome-localizacao">São Paulo, SP</p></li>
+                <a href=""><li><i class="bi bi-card-image"></i></li></a>
             </ul>
         </nav>
     </header>
-<main>
-<section>
-    <h1>CADASTRO DE USUÁRIO</h1>
-
-    <form action="">
-        <div>
-            <label for="">NOME</label>
-            <input type="text">
-
-            <label for="">E-MAIL</label>
-            <input type="email">
-
-            <label for="">CADASTRAR SENHA</label>
-            <input type="password">
-            <label for="">FAVOR CONFIRMAR A SENHA</label>
-            <input type="password">
-
-            <label for="">ENDEREÇO</label>
-            <input type="text">
-
-            <label for="">QUAL MODELO DE SAXOFONE VOCÊ PROCURA?</label>
-            <input type="text">
-
-            <label for="">ACEITA RECEBER AS NOVIDADES DA SAX SUNSET EM SEU EMAIL?</label>
-            <input type="radio" name="ADMIN">SIM
-            <input type="radio" name="ADMIN">NÃO
-
-            <button>CADASTRAR USUÁRIO</button>
+    <main>
+        <section id="mensagens-inicio">
+            <h1 id="nome-empresa">SAX SUNSET <i class="bi bi-sunset"></i> </h1>
+            <h2 class="mensagem">Olá, Seja bem-vindo!
+                <p>Aqui você encontra os diversos tipos e modelos de saxofones importados</p></h2>
+        </section>
+        <section id="input">
+            <i class="bi bi-search"></i>
+            <input id="input-text" type="text" placeholder="Procure o seu saxofone aqui">
+        </section>
+        <div class="caixa">
+            <section class="cadastro-usuario">
+                <h1>CADASTRO DE USUÁRIO</h1>
+                <form action="">
+                    <div class="input-container">
+                        <label for="nome">NOME</label>
+                        <input type="text" id="nome">
+        
+                        <label for="email">E-MAIL</label>
+                        <input type="email" id="email">
+        
+                        <label for="senha">CADASTRAR SENHA</label>
+                        <input type="password" id="senha">
+                        
+                        <label for="confirmar-senha">FAVOR CONFIRMAR A SENHA</label>
+                        <input type="password" id="confirmar-senha">
+        
+                        <label for="endereco">ENDEREÇO</label>
+                        <input type="text" id="endereco">
+        
+                        <label for="modelo-saxofone">QUAL MODELO DE SAXOFONE VOCÊ PROCURA?</label>
+                        <input type="text" id="modelo-saxofone">
+        
+                        <label for="novidades-email">ACEITA RECEBER AS NOVIDADES DA SAX SUNSET EM SEU EMAIL?</label>
+                        <div class="radio-container">
+                            <label for="sim">SIM</label>
+                            <input type="radio" id="sim" name="ADMIN">
+                            <label for="nao">NÃO</label>
+                            <input type="radio" id="nao" name="ADMIN">
+                        </div>
+        
+                        <button class="cadastrar-btn">CADASTRAR USUÁRIO</button>
+                    </div>
+                </form>
+            </section>
         </div>
-    </form>
-</section>
-
-
-    <footer>
-        <ul>
-        <li>
-            <a href=""><i class="bi bi-house"><p>HOME</p></i></a>
-        </li>
-        <li>
-            <a href=""><i class="bi bi-emoji-smile"></i><p>PERFIL</p></i></a>
-        </li>
-        <li>
-            <a href=""><i class="bi bi-receipt"></i><p>CUPONS</p></i></a>
-        </li>
-        <li>
-            <a href=""><i class="bi bi-star"></i></i><p>PEDIDOS</p></i></a>
-        </li>
-    </ul>
+    </main>
+    <footer id="footer" class="footer">
+        <ul class="footer-card">
+            <a href="home.html"><li class="footer-item"><i class="bi bi-house-fill"></i><p class="footer-nome-item">HOME</p></li></a>
+            <a href="cadastrar_usuario.html"><li class="footer-item"><i class="bi bi-emoji-smile"></i><p class="footer-nome-item">CADASTRO USUARIO</p></li></a>
+            <a href="cadastrar_produto.html"><li class="footer-item"><i class="bi bi-upc-scan"></i><p class="footer-nome-item">CADASTRO DE PRODUTO</p></li></a>
+            <a href="carrinho.html"><li class="footer-item"><i class="bi bi-cart"></i><p class="footer-nome-item">CARRINHO</p></li></a>
+            <a href="produto.html"><li class="footer-item"><i class="bi bi-stickies"></i><p class="footer-nome-item">PRODUTO</p></li></a>
+        </ul>
     </footer>
-
-</main>
 </body>
 </html>
