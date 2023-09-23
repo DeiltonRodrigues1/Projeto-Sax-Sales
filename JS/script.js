@@ -1,25 +1,25 @@
-// Adicione um evento de clique ao botão "ADICIONAR AO CARRINHO"
-var adicionarAoCarrinhoBtn = document.querySelector('button');
-adicionarAoCarrinhoBtn.addEventListener('click', function() {
-  // Lógica para adicionar o item ao carrinho
-  console.log('Item adicionado ao carrinho!');
-});
+const btnAdd = document.querySelector("#addBtn"); // Pega o botão
 
-// Adicione um evento de clique aos botões "+" e "-"
-var quantidadeInput = document.querySelector('div p');
-var adicionarBtn = document.querySelector('.bi-plus-square');
-var removerBtn = document.querySelector('.bi-dash-square');
+btnAdd.addEventListener("click", function () {
+  // Verifica se o input está vazio 
+const inputValue = document.querySelector("#myInput").value;
+if (inputValue === "") {
+  alert("Você deve digitar algum texto para adicionar!");
+} else {
+  document.querySelector("#mensagem-ok").insertAdjacentHTML(
+      "afterend",
+      `<div class="card-teste">
+    <span>LOGIN EFETUADO COM SUCESSO</span>
+    </div>
+    `
+    );  
+    
+    const mensagem = document.querySelector('.card-teste');
+    
+    setTimeout(() => {
+mensagem.style.display = "none";
+    }, 3000);
+}
+document.querySelector("#myInput").value = ""; 
 
-adicionarBtn.addEventListener('click', function() {
-  var quantidade = parseInt(quantidadeInput.innerText);
-  quantidade++;
-  quantidadeInput.innerText = quantidade;
-});
-
-removerBtn.addEventListener('click', function() {
-  var quantidade = parseInt(quantidadeInput.innerText);
-  if (quantidade > 1) {
-    quantidade--;
-    quantidadeInput.innerText = quantidade;
-  }
 });

@@ -1,77 +1,121 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="./CSS/style-padrao.css">
-    <title>HOME</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="./CSS/poduto.css" />
+  <link rel="stylesheet" href="./CSS/carrinho.css" />
+  <link rel="stylesheet" href="./CSS/telas.css">
+  <link rel="stylesheet" href="./CSS/login.css">
+  <link rel="stylesheet" href="./CSS/home.css">
+  <title>HOME</title>
 </head>
+
 <body>
-    <header class="cabecalho">
-        <nav class="menu">
-            <ul class="ul-menu">
-                <a href="login.html"><li><i class="bi bi-file-person"></i></li></a>
-                <li id="imagem-localizacao"><i class="bi bi-geo-alt"></i><p class="nome-localizacao">São Paulo, SP</p></li>
-                <a href=""><li><i class="bi bi-card-image"></i></li></a>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="mensagens-inicio">
-            <h1 id="nome-empresa">SAX SUNSET <i class="bi bi-sunset"></i> </h1>
-            <h2 class="mensagem">Olá, Seja bem-vindo!
-                <p>Aqui você encontra os diversos tipos e modelos de saxofones importados</p></h2>
-        </section>
-        <section id="input">
-            <i class="bi bi-search"></i>
-            <input id="input-text" type="text" placeholder="Procure o seu saxofone aqui">
-        </section>
-        <div class="caixa">
-            <section class="cadastro-usuario">
-                <h1>CADASTRO DE USUÁRIO</h1>
-                <form action="">
-                    <div class="input-container">
-                        <label for="nome">NOME</label>
-                        <input type="text" id="nome">
-        
-                        <label for="email">E-MAIL</label>
-                        <input type="email" id="email">
-        
-                        <label for="senha">CADASTRAR SENHA</label>
-                        <input type="password" id="senha">
-                        
-                        <label for="confirmar-senha">FAVOR CONFIRMAR A SENHA</label>
-                        <input type="password" id="confirmar-senha">
-        
-                        <label for="endereco">ENDEREÇO</label>
-                        <input type="text" id="endereco">
-        
-                        <label for="modelo-saxofone">QUAL MODELO DE SAXOFONE VOCÊ PROCURA?</label>
-                        <input type="text" id="modelo-saxofone">
-        
-                        <label for="novidades-email">ACEITA RECEBER AS NOVIDADES DA SAX SUNSET EM SEU EMAIL?</label>
-                        <div class="radio-container">
-                            <label for="sim">SIM</label>
-                            <input type="radio" id="sim" name="ADMIN">
-                            <label for="nao">NÃO</label>
-                            <input type="radio" id="nao" name="ADMIN">
-                        </div>
-        
-                        <button class="cadastrar-btn">CADASTRAR USUÁRIO</button>
-                    </div>
-                </form>
-            </section>
+  <header class="cabecalho">
+    <nav class="menu">
+      <ul class="ul-menu">
+        <a href="login.html">
+          <li id="image-usuario"><i class="bi bi-file-person"></i></li>
+        </a>
+
+        <li id="image-localizacao">
+          <i class="bi bi-geo-alt"></i>
+          <input id="cep" type="text" placeholder="Digite seu CEP">
+          <p class="nome-localizacao"></p>
+          <button onclick="consultaEndereco()">OK</button>
+        </li>
+
+        <li class="logo-empresa">
+          <i class="bi bi-card-image"></i>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+    <section class="secao-login">
+      <h1 id="nome-empresa">CADASTRO USUÁRIO</h1>
+      <img src="" alt="" />
+
+      <form action="">
+        <div class="login-senha">
+          <label for="" class="login">NOME</label>
+          <input type="text" class="input" placeholder="Digite seu nome" />
+
+          <label for="" class="login">E-MAIL</label>
+          <input type="email" class="input" placeholder="Digite seu e-mail" />
+
+          <label for="" class="login">SENHA</label>
+          <input type="password" class="input" placeholder="Digite sua senha" />
+
+          <label for="" class="login">IMAGEM</label>
+          <input
+            type="text"
+            class="input"
+            placeholder="Insira o link da imagem"
+          />
+
+          <label for="" class="login">ENDEREÇO</label>
+          <input type="text" class="input" placeholder="Digite seu endereço" />
+
+          <label for="" class="login">PRODUTOS FAVORITOS</label>
+          <input
+            type="text"
+            class="input"
+            placeholder="Digite seus produtos favoritos"
+          />
+
+          <label class="login">ADMIN</label>
+          <div class="radio">
+            <input for="admin" type="radio" id="admin" name="admin" /><label for="admin" id="admin">Admin</label>
+            <input type="radio" id="cliente" name="admin" /><label for="cliente" id="cliente">Cliente</label>
+          </div>
+          <button class="botao">CADASTRAR USUÁRIO</button>
         </div>
-    </main>
+      </form>
+    </section>
+
     <footer id="footer" class="footer">
-        <ul class="footer-card">
-            <a href="home.html"><li class="footer-item"><i class="bi bi-house-fill"></i><p class="footer-nome-item">HOME</p></li></a>
-            <a href="cadastrar_usuario.html"><li class="footer-item"><i class="bi bi-emoji-smile"></i><p class="footer-nome-item">CADASTRO USUARIO</p></li></a>
-            <a href="cadastrar_produto.html"><li class="footer-item"><i class="bi bi-upc-scan"></i><p class="footer-nome-item">CADASTRO DE PRODUTO</p></li></a>
-            <a href="carrinho.html"><li class="footer-item"><i class="bi bi-cart"></i><p class="footer-nome-item">CARRINHO</p></li></a>
-            <a href="produto.html"><li class="footer-item"><i class="bi bi-stickies"></i><p class="footer-nome-item">PRODUTO</p></li></a>
-        </ul>
-    </footer>
-</body>
+      <ul class="footer-card">
+      <a href="index.html">
+        <li id="footer-item">
+          <i class="bi bi-house-fill"></i>
+          <p class="footer-name-item">HOME</p>
+        </li>
+      </a>
+
+      <a href="cadastrar_usuario.html">
+        <li id="footer-item">
+          <i class="bi bi-emoji-smile"></i>
+          <p class="footer-name-item">CADASTRO USUÁRIO</p>
+        </li>
+      </a>
+
+      <a href="cadastro_produto.html">
+        <li id="footer-item">
+          <i class="bi bi-upc-scan"></i>
+          <p class="footer-name-item">CADASTRO PRODUTO</p>
+        </li>
+      </a>
+
+      <a href="carrinho.html">
+        <li id="footer-item">
+          <i class="bi bi-cart"></i>
+          <p class="footer-name-item">CARRINHO</p>
+        </li>
+      </a>
+
+      <a href="produto.html">
+        <li id="footer-item">
+          <i class="bi bi-stickies"></i>
+          <p class="footer-name-item">PRODUTO</p>
+        </li>
+      </a>
+    </ul>
+  </footer>
+  <script src="./js/script-home.js"></script>
+  </body>
 </html>
