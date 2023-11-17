@@ -7,7 +7,7 @@ function consultaEndereco(){
 
     let url = `https://viacep.com.br/ws/${cep}/json/`;
     fetch(url).then(function(response){
-        //console.log(response);
+        ////console.log(response);
         response.json().then(function(data){
             //console.log(data);
             mostrarEndereco(data);
