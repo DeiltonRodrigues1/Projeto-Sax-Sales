@@ -1,6 +1,6 @@
 /* Seção carrinho */
 .carrinho{
-    
+    display: flex;
     justify-content: space-between;
     margin: 2rem;
 }
